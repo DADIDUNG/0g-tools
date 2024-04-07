@@ -126,7 +126,7 @@ sudo apt install curl git jq build-essential gcc unzip wget lz4 -y
 ### 2. Install Go
 ```bash
 cd $HOME && \
-ver="1.21.3" && \
+ver="1.22.2" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
 sudo rm -rf /usr/local/go && \
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" && \
@@ -149,7 +149,7 @@ evmosd version
 echo 'export MONIKER="My_Node"' >> ~/.bash_profile
 echo 'export CHAIN_ID="zgtendermint_9000-1"' >> ~/.bash_profile
 echo 'export WALLET_NAME="wallet"' >> ~/.bash_profile
-echo 'export RPC_PORT="26657"' >> ~/.bash_profile
+echo 'export RPC_PORT="56657"' >> ~/.bash_profile
 source $HOME/.bash_profile
 ```
 ### 5. Intitialize the node
@@ -174,12 +174,12 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 ```bash
 # Customize if you need
 EXTERNAL_IP=$(wget -qO- eth0.me) \
-PROXY_APP_PORT=26658 \
-P2P_PORT=26656 \
-PPROF_PORT=6060 \
-API_PORT=1317 \
-GRPC_PORT=9090 \
-GRPC_WEB_PORT=9091
+PROXY_APP_PORT=56658 \
+P2P_PORT=56656 \
+PPROF_PORT=6160 \
+API_PORT=1717 \
+GRPC_PORT=9290 \
+GRPC_WEB_PORT=9291
 ```
 ```bash
 sed -i \
