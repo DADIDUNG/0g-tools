@@ -176,10 +176,10 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 EXTERNAL_IP=$(wget -qO- eth0.me) \
 PROXY_APP_PORT=56658 \
 P2P_PORT=56656 \
-PPROF_PORT=6160 \
-API_PORT=1717 \
-GRPC_PORT=9290 \
-GRPC_WEB_PORT=9291
+PPROF_PORT=6060 \
+API_PORT=1317 \
+GRPC_PORT=9090 \
+GRPC_WEB_PORT=9091
 ```
 ```bash
 sed -i \
